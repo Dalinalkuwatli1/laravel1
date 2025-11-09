@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 540728ed96d84896c6d8c3ad263d64af2db831af unknown <Dalin@DESKTOP-TSELHPA.(none)> 1740995097 +0300	clone: from C:/Users/Dalin/AppData/Local/Composer/vcs/https---github.com-laravel-laravel.git/
