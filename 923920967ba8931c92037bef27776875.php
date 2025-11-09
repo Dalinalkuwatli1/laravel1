@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\Dalin\Desktop\DalinLaravel\resources\views/Dashboard/layout/home.blade.php ENDPATH**/ ?>

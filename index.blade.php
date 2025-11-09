@@ -1,61 +1,74 @@
 @extends('dashboard.layout.master')
 
-@section('title_page', 'orders')
+@section('title_page', 'Works')
 @section('content')
 
 <br>
 <br>
 <br>
-<br>
+<br><!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="container mt-4">
-        <!-- Card to add category -->
-        <div class="card shadow-lg p-4">
-            <div class="d-flex justify-content-between align-items-center">
-                <h3>Orders List</h3>
-            </div>
+<!-- Bootstrap 5 JS + Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Table to display orders data -->
-            <div class="table-responsive mt-3">
-                <table class="table table-striped table-bordered text-center">
-                    <thead class="table table-primary">
+<div class="container mt-4">
+    <!-- Card to add works -->
+    <div class="card shadow-lg p-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>Works List</h3>
+            <a href="{{ route('works.create') }}" class="btn btn-danger btn-tone">
+                <i class="fas fa-plus"></i> Add Work
+            </a>
+        </div>
+
+        <!-- Table to display work data -->
+        <div class="table-responsive mt-3">
+            <table class="table table-striped table-bordered text-center">
+                <thead class="table table-primary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($works as $work)
                         <tr>
-                            <th scope="col">user_id</th>
-                            <th scope="col">total_price</th>
-                            <th scope="col">payment_status</th>
-                            <th scope="col">shipping_date</th>
-                            <th scope="col">address</th>
-                            <th scope="col">status</th>
-                            <th scope="col">Options</th>
+                            <td>
+                                <img src="{{ asset($work->image) }}" alt="Work Image" class="rounded-circle" width="50"
+                                    height="50">
+                            </td>
+                            <td>{{ $work->title }}</td>
+                            <td>{{ $work->description }}</td>
+                            <td>{{ $work->phone }}</td>
+                            <td>{{ $work->email }}</td>
+                            <td>
+                                <span class="badge bg-{{ $work->status == 'active' ? 'success' : 'danger' }}">
+                                    {{ ucfirst($work->status) }}
+                                </span>
+                            </td>
+                            <td>{{ $work->created_at->format('d M Y') }}</td>
+                            <td>
+                                <!-- Action buttons -->
+                                <form action="{{ route('works.destroy', $work->id) }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm me-2" type="submit">Delete</button>
+                                </form>
+                                <a href="{{ route('works.edit', $work->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($orders as $show)
-                            <tr>
-                                <td>{{ $show->user_id }}</td>
-                                <td>{{ $show->total_price }}</td>
-                                <td>{{ $show->payment_status }}</td>
-                                <td>{{ $show->shipping_date }}</td>
-                                <td>{{ $show->address }}</td>
-                                <td>
-                                    <span class="badge bg-{{ $show->status == 'Active' ? 'success' : 'danger' }}">
-                                        {{ $show->status }}
-                                    </span>
-                                </td>
-                                <td>
-                                    <a href="{{ route('orders.show', $show->id) }}" class="btn btn-info btn-sm">View</a>
-                                    <form action="{{ route('orders.destroy', $show->id) }}" method="POST" style="display:inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-danger btn-sm">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
 
 @endsection

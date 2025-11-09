@@ -1,172 +1,143 @@
-<div class="header">
-    <div class="logo logo-dark">
-        <a href="index.html">
-            <img src="assets/images/logo/110(2).png" alt="Logo" width="20%" height="20%">
-            <img class="logo-fold" src="assets/images/logo/110(2).png" alt="Logo">
-        </a>
-    </div>
-    <div class="logo logo-white">
-        <a href="index.html">
-            <img src="assets/images/logo/logo-white.png" alt="Logo">
-            <img class="logo-fold" src="assets/images/logo/110(2).png" alt="Logo">
-        </a>
-    </div>
-    <div class="nav-wrap">
-        <ul class="nav-left">
-            <li class="desktop-toggle">
-                <a href="javascript:void(0);">
-                    <i class="anticon"></i>
-                </a>
+<div class="col-lg-7">
+    <!-- MOBILE MENU -->
+    <div class="col-lg-7">
+        <ul class="menu-mobile">
+            <li class="menu-item menu-item-has-children current-menu-item">
+                <a href="home-2.html">Home</a>
+
             </li>
-            <li class="mobile-toggle">
-                <a href="javascript:void(0);">
-                    <i class="anticon"></i>
-                </a>
+            <li class="menu-item menu-item-has-children">
+                <a href="#">Pages</a>
+                <ul class="sub-menu">
+                    <li class="menu-item menu-item-has-children menu-item-parent-2level">
+                        <a href="{{ route('siteProducts.index') }}">our offers </a>
+
+                    </li>
+                    <li class="menu-item"><a href="{{ route('aboutmessite.index') }}">About Me</a></li>
+
+                    <li class="menu-item"><a href="{{ route('aboutUsssite.index') }}">About Us </a></li>
+
+
+                    <li class="menu-item"><a href="{{ route('showFaqsite.index') }}">FAQ Page</a></li>
+
+
+                </ul>
             </li>
-            <li>
-                <a href="javascript:void(0);" data-toggle="modal" data-target="#search-drawer">
-                    <i class="anticon anticon-search"></i>
-                </a>
+            <li class="menu-item menu-item-has-children">
+                <a href="#">Dresses</a>
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="{{ route('eveningdresses1.index') }}">Evening Dresses 1</a></li>
+
+                  <li class="menu-item"><a href="{{ route('eveningdresses2.index') }}">Evening Dresses 2</a></li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item-has-children">
+                <a href="#">Blog</a>
+                <ul class="sub-menu">
+
+                  <li class="menu-item"><a href="{{ route('flowerbouquets.index') }}">Flower Bouquets</a></li>
+                  <li class="menu-item"><a href="{{ route('cap.index') }}">Cap</a></li>
+                  <li class="menu-item"><a href="{{ route('crown.index') }}">crown</a></li>
+                  <li class="menu-item"><a href="{{ route('highheel.index') }}">high heel</a></li>
+                </ul>
             </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="{{ route('ContactUssite.index') }}">Contact </a>
+
+          </li>
         </ul>
-        <ul class="nav-right">
-            <li class="dropdown dropdown-animated scale-left">
-                <a href="javascript:void(0);" data-toggle="dropdown">
-                    <i class="anticon anticon-bell notification-badge"></i>
-                </a>
-                <div class="dropdown-menu pop-notification">
-                    <div class="p-v-15 p-h-25 border-bottom d-flex justify-content-between align-items-center">
-                        <p class="text-dark font-weight-semibold m-b-0">
-                            <i class="anticon anticon-bell"></i>
-                            <span class="m-l-10">Notification</span>
-                        </p>
-                        <a class="btn-sm btn-default btn" href="javascript:void(0);">
-                            <small>View All</small>
-                        </a>
-                    </div>
-                    <div class="relative">
-                        <div class="overflow-y-auto relative scrollable" style="max-height: 300px">
-                            <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
-                                <div class="d-flex">
-                                    <div class="avatar avatar-blue avatar-icon">
-                                        <i class="anticon anticon-mail"></i>
-                                    </div>
-                                    <div class="m-l-15">
-                                        <p class="m-b-0 text-dark">You received a new message</p>
-                                        <p class="m-b-0"><small>8 min ago</small></p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
-                                <div class="d-flex">
-                                    <div class="avatar avatar-cyan avatar-icon">
-                                        <i class="anticon anticon-user-add"></i>
-                                    </div>
-                                    <div class="m-l-15">
-                                        <p class="m-b-0 text-dark">New user registered</p>
-                                        <p class="m-b-0"><small>7 hours ago</small></p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
-                                <div class="d-flex">
-                                    <div class="avatar avatar-red avatar-icon">
-                                        <i class="anticon anticon-user-add"></i>
-                                    </div>
-                                    <div class="m-l-15">
-                                        <p class="m-b-0 text-dark">System Alert</p>
-                                        <p class="m-b-0"><small>8 hours ago</small></p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0);" class="dropdown-item d-block p-15 ">
-                                <div class="d-flex">
-                                    <div class="avatar avatar-gold avatar-icon">
-                                        <i class="anticon anticon-user-add"></i>
-                                    </div>
-                                    <div class="m-l-15">
-                                        <p class="m-b-0 text-dark">You have a new update</p>
-                                        <p class="m-b-0"><small>2 days ago</small></p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            @php
-                $admin = auth('admin')->user()
-            @endphp
-            <li class="dropdown dropdown-animated scale-left">
-                <div class="pointer" data-toggle="dropdown">
-                    <div class="avatar avatar-image m-h-10 m-r-15">
-                        <img src="{{ asset($admin->image) }}"
-                            alt="Admin Avatar">
-                    </div>
+        <!-- /MOBILE MENU -->
+      </div>
+      <div class="col-lg-5">
+        <div class="menu-contact">
+          <!-- Add your menu contact content here -->
+        </div>
+      </div>
+      @php
+      use App\Models\setting;
+           $Settings = setting::first();
+      @endphp
 
-                </div>
-                <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
-                    <div class="p-h-20 p-b-15 m-b-10 border-bottom">
-                        <div class="d-flex m-r-50">
-                            <div class="avatar avatar-lg avatar-image">
-                                <img src="{{ asset($admin->image) }}"
-                                    alt="Admin Avatar">
-                            </div>
-                            <div class="m-l-10">
-                                <p class="m-b-0 text-dark font-weight-semibold">{{ $admin->name }}</p>
-                                <p class="m-b-0 opacity-07">{{ $admin->email }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <i class="anticon opacity-04 font-size-16 anticon-user"></i>
-                                <span class="m-l-10">Edit Profile</span>
-                            </div>
-                            <i class="anticon font-size-10 anticon-right"></i>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <i class="anticon opacity-04 font-size-16 anticon-lock"></i>
-                                <span class="m-l-10">Account Setting</span>
-                            </div>
-                            <i class="anticon font-size-10 anticon-right"></i>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <i class="anticon opacity-04 font-size-16 anticon-project"></i>
-                                <span class="m-l-10">Projects</span>
-                            </div>
-                            <i class="anticon font-size-10 anticon-right"></i>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <i class="anticon opacity-04 font-size-16 anticon-logout"></i>
-                                <span class="m-l-10">Logout</span>
-                            </div>
-                            <i class="anticon font-size-10 anticon-right"></i>
-                        </div>
-                    </a>
+            <style>
+                .social-media {
+                    list-style: none;
+                    padding: 0;
+                    display: flex;
+                }
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
+                .social-media li {
+                    margin-right: 15px;
+                }
 
-                </div>
-            </li>
-            <li>
-                <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">
-                    <i class="anticon anticon-appstore"></i>
-                </a>
-            </li>
-        </ul>
+                .social-media a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: #333;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .social-media a:hover {
+                    color: #007bff;
+                }
+
+                .social-media i {
+                    margin-right: 8px;
+                    font-size: 22px;
+                }
+
+                .social-media img {
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                }
+
+
+  .card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+  }
+
+  .star-rating .star {
+    font-size: 24px;
+    color: #FFD700;
+    cursor: pointer;
+  }
+
+  .heart-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .heart-icon-container.liked i {
+    color: red;
+  }           </style>
+
+
+
+        </head>
+        <body>
+<ul class="social-media">
+    <li><a class="social-facebook" href="{{ $Settings->facebook }}" target="_blank"><i class="fab fa-facebook-f"></i> </a></li>
+    <li><a class="social-whatsapp" href="{{ $Settings->whatsapp }}" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+    <li><a class="social-instagram" href="{{ $Settings->instagram }}" target="_blank"><i class="fab fa-instagram"></i> </a></li>
+    <li><a class="social-telegram" href="{{ $Settings->telegram }}" target="_blank"><i class="fab fa-telegram-plane"></i> </a></li>
+    <li><a href="https://www.tiktok.com/@glamour_gruop?lang=ar" target="_blank"><i class="fab fa-tiktok"></i> </a></li>
+</ul>
+
+
+
+        </div>
     </div>
 </div>
+<!-- /col-lg-5 -->
+</div>
+<!-- /row -->
+</div>
+<!-- /container -->
+</div>
+<!-- /MOBILE MENU HOLDER -->
+<!-- HEADER -->
